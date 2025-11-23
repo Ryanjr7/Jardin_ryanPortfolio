@@ -7,6 +7,36 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <script src="https://kit.fontawesome.com/a2e0e9a1b4.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mon site</title>
+
+    <!-- On cache le corps de la page au départ -->
+    <style>
+        body {
+            display: none;
+        }
+    </style>
+
+    <!-- Mot de passe simple en JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const PASSWORD = "RYAN"; // 🔒 CHANGE ICI TON MOT DE PASSE
+
+            const userPass = prompt("Entrez le mot de passe :");
+
+            if (userPass === PASSWORD) {
+                // Mot de passe correct : on affiche la page
+                document.body.style.display = "block";
+            } else {
+                // Mot de passe incorrect : message d'erreur
+                document.body.style.display = "block";
+                document.body.innerHTML = "<h1>Accès refusé</h1><p>Mauvais mot de passe.</p>";
+            }
+        });
+    </script>
+</head>
+
 </head>
 <body>
   <header class="site-header">
