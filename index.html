@@ -7,36 +7,27 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <script src="https://kit.fontawesome.com/a2e0e9a1b4.js" crossorigin="anonymous"></script>
-  <head>
-    <meta charset="UTF-8">
-    <title>Mon site</title>
 
-    <!-- On cache le corps de la page au départ -->
-    <style>
-        body {
-            display: none;
-        }
-    </style>
+  <!-- Protection par mot de passe (simple, côté client) -->
+  <style>
+    body {
+      display: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const PASSWORD = "RYAN"; // 🔒 Change ce mot de passe
 
-    <!-- Mot de passe simple en JavaScript -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const PASSWORD = "RYAN"; // 🔒 CHANGE ICI TON MOT DE PASSE
+      const userPass = prompt("Entrez le mot de passe :");
 
-            const userPass = prompt("Entrez le mot de passe :");
-
-            if (userPass === PASSWORD) {
-                // Mot de passe correct : on affiche la page
-                document.body.style.display = "block";
-            } else {
-                // Mot de passe incorrect : message d'erreur
-                document.body.style.display = "block";
-                document.body.innerHTML = "<h1>Accès refusé</h1><p>Mauvais mot de passe.</p>";
-            }
-        });
-    </script>
-</head>
-
+      if (userPass === PASSWORD) {
+        document.body.style.display = "block";
+      } else {
+        document.body.style.display = "block";
+        document.body.innerHTML = "<h1>Accès refusé</h1><p>Mauvais mot de passe.</p>";
+      }
+    });
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -115,6 +106,7 @@
       <ul class="links">
         <li><a href="Diagrammedraw.png" target="_blank">Diagramme 2 </a></li>
         <li><a href="ReservationClient.png" target="_blank">Réservation client (draw.io)</a></li>
+        <li><a href="Flux.pdf" target="_blank">Diagramme des flux</a></li>
       </ul>
 
       <h3>TD4</h3>
@@ -199,6 +191,33 @@
         <li><a href="Panier_figma.png" target="_blank">Panier – maquette Figma</a></li>
         <li><a href="Produit_figma.png" target="_blank">Produit – maquette Figma</a></li>
         <li><a href="Accueil_figma.png" target="_blank">Accueil – maquette Figma</a></li>
+      </ul>
+
+
+<h3>Présentation</h3>
+<div class="presentation">
+  <video controls autoplay muted loop
+         style="max-width:500px;width:100%;height:auto;display:block;margin:1rem auto;">
+    <source src="ABSVideo.mov" type="video/quicktime">
+    Votre navigateur ne supporte pas la vidéo. Voici un lien direct :
+    <a href="ABSVideo.mov">ABSVideo.mov</a>
+  </video>
+</div>
+
+      <!-- Lien vers le site ABS -->
+<h3>Site du projet</h3>
+<ul class="links">
+   <a href="https://abs.great-site.net/" target="_blank">https://abs.great-site.net/</a>
+</ul>
+
+
+      <!-- Nouvelle sous-partie : Code source -->
+      <h3>Code source</h3>
+      <ul class="links">
+        <li><a href="abs_main_codeSource.zip" target="_blank">Code source du projet (ZIP)</a></li>
+
+
+
       </ul>
     </section>
 
